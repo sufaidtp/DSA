@@ -36,7 +36,7 @@ function join(left, right) {
             
         }
     }
-    while (i < left.length) {
+    while (i <  left.length) {
         newArr[k] = left[i]
         k++
         i++
