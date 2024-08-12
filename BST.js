@@ -100,6 +100,47 @@ class BST {
             return this.getminvalue(currentnode.left)
         }
     }
+    getminValue(currentnode) {
+        if (currentnode.left == null) {
+            return currentnode.data
+        } else {
+            return this.getminValue(currentnode.left)
+        }
+
+    }
+    inOrder(){
+        this.inOrdervalue(this.root)
+    }
+    inOrdervalue(node){
+        if(node!=null){
+            this.inOrdervalue(node.left)
+            console.log(node.data);
+            this.inOrdervalue(node.right)
+            
+        }
+    }
+    preOrder(){
+        this.preOrderValue(this.root)
+    }
+    preOrderValue(node){
+        if(node!=null){
+        console.log(node.data);
+        this.preOrderValue(node.left)
+        this.preOrderValue(node.right)
+        
+    }
+}
+    postOrder(){
+        this.postOrderValue(this.root)
+    }
+    postOrderValue(node){
+        if(node!=null){
+            this.postOrderValue(node.left)
+            this.postOrderValue(node.right)
+            console.log(node.data);
+            
+        }
+    }
 }
 
 const nBST = new BST()
@@ -107,5 +148,8 @@ nBST.insert(10)
 nBST.insert(5)
 nBST.insert(8)
 nBST.insert(11)
-nBST.remove(11)
-console.log(nBST.contain(11));
+// nBST.remove(11)
+// console.log(nBST.contain(5));
+// nBST.inOrder()
+// nBST.preOrder()
+nBST.postOrder()
