@@ -93,13 +93,7 @@ class BST {
             }
         }
     }
-    getminvalue(currentnode) {
-        if (currentnode.left == null) {
-            return currentnode.data
-        } else {
-            return this.getminvalue(currentnode.left)
-        }
-    }
+   
     getminValue(currentnode) {
         if (currentnode.left == null) {
             return currentnode.data
@@ -144,12 +138,14 @@ class BST {
 }
 
 const nBST = new BST()
+nBST.insert(12)
+nBST.insert(2)
+nBST.insert(18)
+nBST.insert(9)
 nBST.insert(10)
-nBST.insert(5)
-nBST.insert(8)
-nBST.insert(11)
-// nBST.remove(11)
-// console.log(nBST.contain(5));
+nBST.insert(15)
+nBST.remove(15)
+console.log(nBST.contain(18))
 // nBST.inOrder()
 // nBST.preOrder()
-nBST.postOrder()
+// nBST.postOrder()
