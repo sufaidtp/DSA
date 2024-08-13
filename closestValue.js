@@ -73,13 +73,12 @@ class BST {
             } else if (target > currentnode.data) {
                 currentnode = currentnode.right
             } else {
-                break;
+                break
             }
         }
         return closest
     }
 }
-
 const newBST = new BST()
 newBST.insert(5)
 newBST.insert(8)
@@ -88,6 +87,6 @@ newBST.insert(9)
 newBST.insert(4)
 newBST.insert(11)
 // console.log(newBST.contain(8));
-console.log(newBST.findClosestValue(45))
+// console.log(newBST.findClosestValue(6))
 
-// newBST.inOrder()
+newBST.inOrder()
